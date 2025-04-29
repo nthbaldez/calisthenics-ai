@@ -40,7 +40,7 @@ export default function Home() {
           </div>
 
           {/* Hero Image */}
-          <div
+          {/* <div
             className="mt-16 md:mt-24 max-w-5xl mx-auto animate-fade-in opacity-0"
             style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
           >
@@ -48,7 +48,7 @@ export default function Home() {
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80')] bg-center bg-cover"></div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
