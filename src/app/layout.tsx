@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { Navbar } from '@/components/navbar'
+import { Toaster } from 'sonner'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -24,6 +25,7 @@ export default function RootLayout({
         <div className="min-h-screen flex flex-col">
           <Navbar />
           <main className="flex-grow">{children}</main>
+          <Toaster />
           <footer className="py-6 px-4 border-t">
             <div className="container max-w-7xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center">
