@@ -78,7 +78,7 @@ export function WorkoutPageContent() {
     //   title: 'Treino gerado com sucesso!',
     //   description: 'Seu plano de treino personalizado está pronto.',
     // })
-    console.log('Treino gerado com sucesso!')
+    console.log('Treino de exemplo gerado com sucesso!')
   }
 
   const handleStartWorkout = () => {
