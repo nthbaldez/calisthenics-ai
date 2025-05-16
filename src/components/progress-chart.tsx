@@ -28,12 +28,12 @@ import {
 interface ProgressChartProps {
   title: string
   description?: string
-  data: {
-    date: string
-    peso: number
-    gordura: number
-  }[]
-  dataKeys: { key: string; name: string; color: string }[]
+  data: Array<{ date: string; [key: string]: string | number }>
+  dataKeys: Array<{
+    key: string
+    name: string
+    color: string
+  }>
 }
 
 export function ProgressChart({
