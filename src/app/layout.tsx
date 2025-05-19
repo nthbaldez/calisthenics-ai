@@ -1,8 +1,11 @@
 import './globals.css'
+
 import type { Metadata } from 'next'
+
 import { Inter } from 'next/font/google'
 import { Navbar } from '@/components/navbar'
 import { Toaster } from 'sonner'
+import { ToastProvider } from '@/contexts/ToastContext'
 
 const inter = Inter({
   variable: '--font-inter',
@@ -24,8 +27,10 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased`}>
         <div className="min-h-screen flex flex-col">
           <Navbar />
-          <main className="flex-grow">{children}</main>
-          <Toaster />
+          <ToastProvider>
+            <main className="flex-grow">{children}</main>
+            <Toaster />
+          </ToastProvider>
           <footer className="py-6 px-4 border-t">
             <div className="container max-w-7xl mx-auto">
               <div className="flex flex-col md:flex-row justify-between items-center">

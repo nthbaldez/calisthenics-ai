@@ -1,6 +1,9 @@
 'use client'
 
 import { FormEvent, useState } from 'react'
+
+import { useRouter } from 'next/navigation'
+
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import {
@@ -13,7 +16,6 @@ import {
 } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Label } from '@/components/ui/label'
-// import { useToast } from '@/hooks/use-toast'
 import {
   Select,
   SelectContent,
@@ -23,13 +25,14 @@ import {
 } from '@/components/ui/select'
 import { Checkbox } from '@/components/ui/checkbox'
 import { Eye, EyeOff } from 'lucide-react'
+import { useToast } from '@/hooks/use-toast'
 
 export default function AuthForm() {
   const [isLoading, setIsLoading] = useState(false)
   const [showPassword, setShowPassword] = useState(false)
   const [showRegisterPassword, setShowRegisterPassword] = useState(false)
-  // const { toast } = useToast()
-  // const navigate = useNavigate()
+  const { showToast } = useToast()
+  const router = useRouter()
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault()
@@ -38,15 +41,20 @@ export default function AuthForm() {
     // Simulate authentication
     setTimeout(() => {
       setIsLoading(false)
-      // toast({
-      //   title: 'Sucesso!',
-      //   description: 'Login realizado com sucesso.',
-      // })
-      // navigate('/dashboard')
+      showToast('Sucesso!', {
+        description: 'Login realizado com sucesso.',
+        duration: 2000,
+        // action: {
+        //   label: 'Dismiss',
+        //   onClick: () => console.log('dismiss'),
+        // },
+      })
+
+      router.push('/dashboard')
     }, 1500)
   }
 
-  const handleRegister = (e: React.FormEvent) => {
+  const handleRegister = (e: FormEvent) => {
     e.preventDefault()
     setIsLoading(true)
 

@@ -35,9 +35,9 @@ export function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navbarClass}`}
+      className={`px-4 fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${navbarClass}`}
     >
-      <div className="container mx-auto px-4 py-4">
+      <div className="container mx-auto py-4">
         <div className="flex items-center justify-between">
           <Link href={'/'} className="flex items-center space-x-2">
             <span className="font-bold text-xl">Calisthenics AI</span>

@@ -29,7 +29,7 @@ export function WorkoutForm() {
   const [isLoading, setIsLoading] = useState(false)
   // const { toast } = useToast()
 
-  const handleSubmit = (e: FormEvent) => {
+  function handleSubmit(e: FormEvent) {
     e.preventDefault()
 
     setIsLoading(true)
